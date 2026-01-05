@@ -90,16 +90,16 @@ const App = () => {
     {
       title: "Multilingual Fake News Detection",
       description: "Multi-language fake news detection platform using ensemble ML models. Analyzes text patterns across English, Hindi, and Tamil to classify news authenticity in real-time.",
-      image: "/images/FakeNews.png",
+      image: "/images/fakenews.png",
       tech: ["NLP", "scikit-learn", "TF-IDF", "NLTK", "Streamlit"],
       github: "https://github.com/VinothanaBalakrishnan05/multilingual-fake-news",
       live: null,
       category: "AI/ML"
     },
     {
-      title: "TNEA College Predictor",
+      title: "TNEA College Decision Support System",
       description: "Intelligent college recommendation system with rank-based prediction engine. Features secure authentication, role-based access control, and real-time cutoff analysis.",
-      image: "/images/TNEA.png",
+      image: "/images/tnea.png",
       tech: ["React.js", "Node.js", "MySQL", "REST APIs", "ExcelJS"],
       github: "https://github.com/VinothanaBalakrishnan05/TNEA_COLLEGE_SEARCH",
       live: null,
