@@ -1615,7 +1615,7 @@ const App = () => {
       <section id="projects" className="section">
         <div className="section-content">
           <div className="section-header">
-            <div className="section-label">// PORTFOLIO</div>
+            <div className="section-label"> PORTFOLIO</div>
             <h2 className="section-title">Featured Projects</h2>
           </div>
           <div className="projects-grid">
@@ -1660,7 +1660,7 @@ const App = () => {
       <section id="skills" className="section">
         <div className="section-content">
           <div className="section-header">
-            <div className="section-label">// EXPERTISE</div>
+            <div className="section-label">EXPERTISE</div>
             <h2 className="section-title">Tech Stack</h2>
           </div>
           <div className="skills-grid">
@@ -1687,7 +1687,7 @@ const App = () => {
       <section id="education" className="section">
         <div className="section-content">
           <div className="section-header">
-            <div className="section-label">// BACKGROUND</div>
+            <div className="section-label">BACKGROUND</div>
             <h2 className="section-title">Academic Journey</h2>
           </div>
           <div className="education-timeline">
@@ -1714,7 +1714,7 @@ const App = () => {
       <section className="section">
         <div className="section-content">
           <div className="section-header">
-            <div className="section-label">// MILESTONES</div>
+            <div className="section-label">MILESTONES</div>
             <h2 className="section-title">Achievements</h2>
           </div>
           <div className="achievements-grid">
@@ -1735,7 +1735,7 @@ const App = () => {
       <section id="contact" className="section">
         <div className="section-content">
           <div className="section-header">
-            <div className="section-label">// GET IN TOUCH</div>
+            <div className="section-label">GET IN TOUCH</div>
             <h2 className="section-title">Let's Connect</h2>
           </div>
           <div className="contact-content">
