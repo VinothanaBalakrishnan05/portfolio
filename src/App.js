@@ -88,13 +88,13 @@ const App = () => {
       category: "AI/ML"
     },
     {
-      title: "Multilingual Fake News Detection",
-      description: "Multi-language fake news detection platform using ensemble ML models. Analyzes text patterns across English, Hindi, and Tamil to classify news authenticity in real-time.",
-      image: "/images/fakenews.png",
-      tech: ["NLP", "scikit-learn", "TF-IDF", "NLTK", "Streamlit"],
-      github: "https://github.com/VinothanaBalakrishnan05/multilingual-fake-news",
-      live: null,
-      category: "AI/ML"
+      title: "StudyTogether – Real-Time AI-Powered Group Study Platform",
+      description: "Real-time collaborative platform for group study sessions, leveraging AI to enhance learning experiences.",
+      image: "/images/studytogether.png",
+      tech: ["React.js", "Node.js", "Socket.io", "MongoDB", "Ollama-Mistral 7B"],
+      github: "https://github.com/VinothanaBalakrishnan05/grpStudy",
+      live: "https://grp-study.vercel.app/",
+      category: "Full Stack with AI"
     },
     {
       title: "TNEA College Decision Support System",
@@ -647,7 +647,8 @@ const App = () => {
         /* Projects Section */
         .projects-grid {
           display: grid;
-          gap: 2.5rem;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 2rem;
         }
 
         .project-card {
@@ -657,10 +658,9 @@ const App = () => {
           border-radius: 20px;
           overflow: hidden;
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          display: grid;
-          grid-template-columns: 450px 1fr;
+          display: flex;
+          flex-direction: column;
           position: relative;
-          
         }
 
         .project-card::before {
@@ -690,7 +690,8 @@ const App = () => {
           overflow: hidden;
           background: var(--bg-tertiary);
           width: 100%;
-          height: 100%;
+          height: 240px;
+          flex-shrink: 0;
         }
 
         .project-category {
@@ -713,6 +714,7 @@ const App = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position: center top;
           transition: transform 0.6s ease;
         }
 
@@ -721,16 +723,17 @@ const App = () => {
         }
 
         .project-content {
-          padding: 2.5rem;
+          padding: 1.75rem;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          flex: 1;
         }
 
         .project-header h3 {
-          font-size: 1.75rem;
+          font-size: 1.35rem;
           font-weight: 700;
-          margin-bottom: 1rem;
+          margin-bottom: 0.75rem;
           font-family: 'JetBrains Mono', monospace;
         }
 
@@ -1296,8 +1299,8 @@ const App = () => {
         /* Responsive */
         @media (max-width: 1200px) {
           .achievements-grid {
-            grid-template-columns: 1fr;
-            max-width: 500px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            max-width: 100%;
           }
 
           .hero-content {
@@ -1319,12 +1322,8 @@ const App = () => {
             font-size: 3.5rem;
           }
 
-          .project-card {
-            grid-template-columns: 1fr;
-          }
-
-          .project-image {
-            height: 280px;
+          .projects-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
           }
 
           .contact-content {
@@ -1333,34 +1332,187 @@ const App = () => {
         }
 
         @media (max-width: 768px) {
+          .nav-content {
+            padding: 0 1rem;
+          }
+
           .nav-links {
-            gap: 0.25rem;
+            gap: 0;
           }
 
           .nav-link {
-            padding: 0.5rem 0.75rem;
-            font-size: 0.85rem;
+            padding: 0.4rem 0.5rem;
+            font-size: 0.78rem;
+          }
+
+          .theme-toggle {
+            width: 34px;
+            height: 34px;
+            margin-left: 0.5rem;
+          }
+
+          .logo {
+            font-size: 1.2rem;
+          }
+
+          .hero {
+            padding: 7rem 1.25rem 3rem;
           }
 
           .hero-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
           }
 
           .hero-subtitle {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
+          }
+
+          .hero-description {
+            font-size: 0.95rem;
+          }
+
+          .hero-buttons {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+          }
+
+          .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 0.875rem 1.5rem;
+          }
+
+          .profile-wrapper {
+            width: 220px;
+            height: 220px;
+          }
+
+          .profile-glow {
+            width: 260px;
+            height: 260px;
+          }
+
+          .section {
+            padding: 4rem 1.25rem;
           }
 
           .section-title {
-            font-size: 2rem;
+            font-size: 1.75rem;
+          }
+
+          .section-header {
+            margin-bottom: 2.5rem;
+          }
+
+          .projects-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+          }
+
+          .project-image {
+            height: 200px;
+          }
+
+          .project-content {
+            padding: 1.25rem;
+          }
+
+          .project-header h3 {
+            font-size: 1.15rem;
           }
 
           .skills-grid {
             grid-template-columns: 1fr;
           }
 
+          .achievements-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .education-timeline {
+            padding: 1rem 0;
+          }
+
+          .timeline-line {
+            left: 16px;
+          }
+
+          .timeline-dot {
+            left: 16px;
+          }
+
+          .education-item {
+            justify-content: flex-end;
+            padding-left: 48px;
+          }
+
+          .education-card {
+            max-width: 100%;
+            padding: 1.5rem;
+          }
+
+          .education-details h3 {
+            font-size: 1.2rem;
+          }
+
+          .contact-content {
+            gap: 2rem;
+          }
+
+          .contact-info h3 {
+            font-size: 1.75rem;
+          }
+
+          .contact-form {
+            padding: 1.5rem;
+          }
+
+          .contact-link-text span {
+            font-size: 0.75rem;
+            word-break: break-all;
+          }
+
+          .form-success {
+            top: auto;
+            bottom: 1rem;
+            right: 1rem;
+            left: 1rem;
+            text-align: center;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .nav-link {
+            padding: 0.35rem 0.4rem;
+            font-size: 0.72rem;
+          }
+
+          .hero-title {
+            font-size: 1.7rem;
+          }
+
+          .hero-subtitle {
+            font-size: 1rem;
+          }
+
+          .section-title {
+            font-size: 1.5rem;
+          }
+
           .profile-wrapper {
-            width: 280px;
-            height: 280px;
+            width: 180px;
+            height: 180px;
+          }
+
+          .tech-tag {
+            font-size: 0.72rem;
+            padding: 0.375rem 0.75rem;
+          }
+
+          .skill-item {
+            font-size: 0.8rem;
+            padding: 0.5rem 0.875rem;
           }
         }
       `}</style>
